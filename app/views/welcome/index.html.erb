@@ -1,0 +1,38 @@
+<h1> Welcome to boot badges</h1>
+
+<script id="some-template" type="text/x-handlebars-template">
+  <table>
+    <thead>
+      <th>Username</th>
+      <th>Real Name</th>
+      <th>Email</th>
+    </thead>
+    <tbody>
+      {{#users}}
+        <tr>
+          <td>{{username}}</td>
+          <td>{{first_name}} {{last_name}}</td>
+          <td>{{email}}</td>
+        </tr>
+      {{/users}}
+    </tbody>
+  </table>
+</script>
+
+<script id="some-template2" type="text/x-handlebars-template">
+  <h2>hi</h2>
+
+      <p>
+        {{email}}
+      </p>
+    
+</script>
+
+<div id="content-placeholder">
+</div>
+
+<br>
+<button type="button" id="load-teachers"> Load Teachers</button>
+
+<div id="content-placeholder2">
+</div>
