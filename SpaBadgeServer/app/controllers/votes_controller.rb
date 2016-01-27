@@ -1,6 +1,7 @@
 class VotesController < ApplicationController
 
   def create
+
     @vote = Vote.new(vote_params)
     p params
     if @vote.save
@@ -13,7 +14,7 @@ class VotesController < ApplicationController
 private
 
   def vote_params
-    params.permit(:badge, :value)
+    params.permit(:badge_id, :value)
   end
 
   def err

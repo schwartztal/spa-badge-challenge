@@ -14,8 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :users, except: [:new, :edit ]
     resources :badges, except: [:new, :edit]
-    resources :votes, except: [:new, :edit]
-
+    put 'badge/vote' => 'badges#update'
   # Example resource route with options:
   #   resources :products do
   #     member do
