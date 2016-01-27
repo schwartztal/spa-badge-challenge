@@ -10,10 +10,6 @@ User.create!(name: "Walker", cohort:"SF Island Foxes")
 User.create!(name: "Julian", cohort:"SF Island Foxes")
 User.create!(name: "Disco Stu", cohort:"SF Island Foxes")
 
-Badge.create!(user_id: 1, content:"most likely to have big hair")
+Badge.create!(user_id: 1, content:"most likely to have big hair", score: 1)
 Badge.create!(user_id: 1, content:"most likely to paint his nails")
 Badge.create!(user_id: 1, content:"most likely to buy us a beer")
-
-Vote.create!(badge_id: 1, value: 1)
-Vote.create!(badge_id: 2, value: -1)
-Vote.create!(badge_id: 2, value: -1)
