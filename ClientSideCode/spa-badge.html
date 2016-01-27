@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/handlebars-v4.0.5.js"></script>
+  <script src="js/miniQuery.js"></script>
+  <script src="js/app.js"></script>
+
+
+
+  <title>SPABadge</title>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h1> Boot Badges - SPA </h1>
+    </div>
+    <h1> SF Island Foxes 2016 </h1>
+    <script id="teacher-list-template" type="text/x-handlebars-template">
+      <ul>
+        {{#each users}}
+        <li>{{{link this}}}</li>
+        {{/each}}
+      </ul>
+    </script>
+    <script id="teacher-badge-template" type="text/x-handlebars-template">
+      <h2>{{user.name}}</h2>
+      <ul>
+        {{#badges}}
+          <li>
+            {{content}} <a href="#" class="btn btn-success" id={{id}}><span class="glyphicon glyphicon-thumbs-up"></span></a><a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span></a> Points: {{score}}
+          </li>
+        {{/badges}}
+      </ul>
+    </script>
+    <div id="content-placeholder">
+    </div>
+    <div id="teacher-placeholder">
+    </div>
+  </div>
+</body>
+</html>
